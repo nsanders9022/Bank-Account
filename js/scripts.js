@@ -1,28 +1,29 @@
 var masterAccount
 
-function Balances(initialDeposit, name1) {
+function Balances(userName, initialDeposit) {
+  this.userName = userName;
   this.initialDeposit = initialDeposit;
-  this.name1 = name1;
 }
 
-Balances.prototype.addMoney = function() {
+Balances.prototype.depositMoney = function(deposit) {
     this.initialDeposit += deposit;
 }
 
-Balances.prototype.subtractMoney = function() {
+Balances.prototype.withdrawMoney = function(withdrawal) {
     this.initialDeposit -= withdrawal;
 }
 
-$(function() {
+$(document).ready(function() {
+  var initialDeposit;
   $("#bank").submit(function(event) {
     event.preventDefault();
 
     var name = $("#name").val();
-    var initialDeposit = parseInt($("#initialDeposit").val());
+    initialDeposit = parseInt($("#initialDeposit").val());
 
-    masterAccount = new Balances(initialDeposit, name)
+    masterAccount = new Balances(name, initialDeposit)
 
-    $("#transactions").text(masterAccount.initialDeposit)
+    $("#transactions").text("$"+masterAccount.initialDeposit)
 
     $("#initialDeposit").val("");
     $("#name").val("");
@@ -30,18 +31,22 @@ $(function() {
   })
 
   $("#math").submit(function(event) {
+    event.preventDefault();
     var deposit = parseInt($("#deposit").val());
     var withdrawal = parseInt($("#withdrawal").val());
 
     if (deposit > 0) {
-      masterAccount.addMoney();
+      masterAccount.depositMoney(deposit);
     }
 
     if (withdrawal > 0) {
-      masterAccount.subtractMoney();
+      masterAccount.withdrawMoney(withdrawal);
     }
 
-    $("#transactions").text(masterAccount.initialDeposit);
+    $("#transactions").text("$"+masterAccount.initialDeposit);
+
+    $("#deposit").val("");
+    $("#withdrawal").val("");
   })
 
 

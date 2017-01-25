@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css"rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Bank Account</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Super Dope Bank</h1>
-      </div>
-      <form id="bank">
-        <div class="row">
-          <div class="col-md-6">
-            <div>
-              <label for="name">Enter your name:</label>
-              <input type="text" id="name">
-            </div>
-            <div>
-              <label for="initialDeposit">Initial Deposit:</label>
-              <input type="number" id="initialDeposit">
-            </div>
-            <button type="submit">Enter</button>
-          </div>
-
-        </form>
-        <form id="math">
-          <div class="col-md-6">
-            <div>
-              <label for="deposit">Deposit:</label>
-              <input type="number" id="deposit">
-            </div>
-            <div>
-              <label for="withdrawal">Withdrawal:</label>
-              <input type="number" id="withdrawal">
-            </div>
-            <button id="manipulate" type="submit">manipulate</button>
-          </div>
-          </form>
-        </div>
-
-
-
-
-        <div class="result">
-          <p id="transactions">
-
-          </p>
-        </div>
-
-      </div>
-
+<head>
+  <link href="css/bootstrap.css"rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Bank Account</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Super Dope Bank</h1>
     </div>
-  </body>
+
+    <div class="row">
+      <form id="bank">
+        <div class="col-md-6">
+          <div>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name">
+          </div>
+          <div>
+            <label for="initialDeposit">Initial Deposit:</label>
+            <input type="number" id="initialDeposit">
+          </div>
+          <button type="submit">Enter</button>
+        </div>
+      </form>
+
+      <form id="math">
+        <div class="col-md-6">
+          <div>
+            <label for="deposit">Deposit:</label>
+            <input type="number" id="deposit">
+          </div>
+          <div>
+            <label for="withdrawal">Withdrawal:</label>
+            <input type="number" id="withdrawal">
+          </div>
+          <button id="manipulate" type="submit">manipulate</button>
+        </div>
+      </form>
+    </div>
+
+
+
+
+    <div class="result">
+      <p id="transactions">
+
+      </p>
+    </div>
+
+  </div>
+
+</div>
+</body>
 </html>
