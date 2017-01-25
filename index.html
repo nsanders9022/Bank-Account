@@ -8,6 +8,51 @@
     <title>Bank Account</title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Super Dope Bank</h1>
+      </div>
+      <form id="bank">
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <label for="name">Enter your name:</label>
+              <input type="text" id="name">
+            </div>
+            <div>
+              <label for="initialDeposit">Initial Deposit:</label>
+              <input type="number" id="initialDeposit">
+            </div>
+            <button type="submit">Enter</button>
+          </div>
 
+        </form>
+        <form id="math">
+          <div class="col-md-6">
+            <div>
+              <label for="deposit">Deposit:</label>
+              <input type="number" id="deposit">
+            </div>
+            <div>
+              <label for="withdrawal">Withdrawal:</label>
+              <input type="number" id="withdrawal">
+            </div>
+            <button id="manipulate" type="submit">manipulate</button>
+          </div>
+          </form>
+        </div>
+
+
+
+
+        <div class="result">
+          <ul id="transactions">
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
   </body>
 </html>
